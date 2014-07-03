@@ -41,4 +41,9 @@ public class SpiralArrayPopulatorTest extends SpiralArrayPopulator {
     public void testDetermineStartingIndicesForFour(){
         assertEquals(1, SpiralArrayPopulator.determineStartingIndices(new SpiralArray(4)));
     }
+
+    @Test
+    public void testDetermineStartingIndicesForEight(){
+        assertEquals(1, SpiralArrayPopulator.determineStartingIndices(new SpiralArray(8)));
+    }
 }

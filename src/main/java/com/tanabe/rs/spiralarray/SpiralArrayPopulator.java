@@ -20,6 +20,17 @@ public class SpiralArrayPopulator {
     }
 
     protected static int determineStartingIndices(SpiralArray array){
-        return (int)(Math.ceil(Math.sqrt(array.getArrayHeight())) - 1);
+        if(array.getArrayWidth() < 3)
+            return determineStartingIndiciesWhenStartingInTheUpperLeftCorner(array);
+        else
+            return determineStartingIndiciesWhenStartingInTheCenter(array);
     }
+
+        private static int determineStartingIndiciesWhenStartingInTheUpperLeftCorner(SpiralArray array){
+            return (int)(Math.floor(Math.sqrt(array.getArrayHeight())) - 1);
+        }
+
+        private static int determineStartingIndiciesWhenStartingInTheCenter(SpiralArray array){
+            return (int)Math.floor(Math.sqrt(array.getArrayHeight()));
+        }
 }

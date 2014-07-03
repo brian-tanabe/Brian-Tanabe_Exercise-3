@@ -15,11 +15,12 @@ public class CurrentArrayPosition {
     }
 
     public void move(){
-
+        currentColumnIndex += currentDirection.getColumnIndexAdjustmentForMovementDirection();
+        currentRowIndex += currentDirection.getRowIndexAdjustmentForMovementDirection();
     }
 
     public void turn(){
-
+        currentDirection = currentDirection.turn();
     }
 
     public int getCurrentColumnIndex() {

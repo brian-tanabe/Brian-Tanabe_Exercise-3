@@ -11,7 +11,7 @@ import static junit.framework.Assert.assertEquals;
 public class HitEachValueTwiceIteratorTest {
 
     @Test
-    public void testStartAtZero(){
+    public void testStartAtOne(){
         HitEachValueTwiceIterator iterator = new HitEachValueTwiceIterator(1);
         assertEquals((int)1, (int)iterator.next());
     }

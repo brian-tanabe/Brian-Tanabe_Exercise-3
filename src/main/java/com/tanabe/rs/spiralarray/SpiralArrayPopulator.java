@@ -1,6 +1,7 @@
 package com.tanabe.rs.spiralarray;
 
 import com.tanabe.rs.spiralarray.helpers.CurrentArrayPosition;
+import com.tanabe.rs.spiralarray.helpers.HitEachValueTwiceIterator;
 
 /**
  * Created by Brian on 7/3/2014.
@@ -23,11 +24,17 @@ public class SpiralArrayPopulator {
     public SpiralArray createAndPopulateSpiralArray(){
         spiralArray = new SpiralArray(numberToPrintUpTo);
 
+        HitEachValueTwiceIterator stepIterator = new HitEachValueTwiceIterator(1);
         for(int numberToAddToArray = 0; numberToAddToArray <= numberToPrintUpTo;){
-            spiralArray.set(currentPosition.getCurrentColumnIndex(), currentPosition.getCurrentRowIndex(), numberToAddToArray);
+            while(numberToAddToArray <= numberToPrintUpTo){
+                for(int stepsTakenSinceLastTurn = 0; stepsTakenSinceLastTurn < stepIterator.next(); stepsTakenSinceLastTurn++){
+                    spiralArray.set(currentPosition.getCurrentColumnIndex(), currentPosition.getCurrentRowIndex(), numberToAddToArray);
+                    numberToAddToArray++;
+                    currentPosition.move();
+                }
+                currentPosition.turnRight();
+            }
 
-            currentPosition.move();
-            numberToAddToArray++;
         }
 
         return spiralArray;

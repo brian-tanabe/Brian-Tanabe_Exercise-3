@@ -20,6 +20,10 @@ public class HitEachValueTwiceIterator implements Iterator<Integer> {
 
     @Override
     public Integer next() {
+        if(hitCount++ > 1){
+            hitCount = 1;
+            currentValue += 1;
+        }
 
         return currentValue;
     }

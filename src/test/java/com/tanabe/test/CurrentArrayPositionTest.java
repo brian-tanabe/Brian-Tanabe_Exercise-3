@@ -27,4 +27,80 @@ public class CurrentArrayPositionTest {
         assertEquals("column", 2, position.getCurrentColumnIndex());
         assertEquals("row", 2, position.getCurrentRowIndex());
     }
+
+    @Test
+    public void testStartAtOneOneAndMoveRightOnceDownOnceLeftOnce(){
+        CurrentArrayPosition position = new CurrentArrayPosition(1);
+        position.move();
+        position.turnRight();
+        position.move();
+        position.turnRight();
+        position.move();
+        assertEquals("column", 1, position.getCurrentColumnIndex());
+        assertEquals("row", 2, position.getCurrentRowIndex());
+    }
+
+    @Test
+    public void testStartAtOneOneAndMoveRightOnceDownOnceLeftTwice(){
+        CurrentArrayPosition position = new CurrentArrayPosition(1);
+        position.move();
+        position.turnRight();
+        position.move();
+        position.turnRight();
+        position.move();
+        position.move();
+        assertEquals("column", 0, position.getCurrentColumnIndex());
+        assertEquals("row", 2, position.getCurrentRowIndex());
+    }
+
+    @Test
+    public void testStartAtOneOneAndMoveRightOnceDownOnceLeftTwiceUpOnce(){
+        CurrentArrayPosition position = new CurrentArrayPosition(1);
+        position.move();
+        position.turnRight();
+        position.move();
+        position.turnRight();
+        position.move();
+        position.move();
+        position.turnRight();
+        position.move();
+        assertEquals("column", 0, position.getCurrentColumnIndex());
+        assertEquals("row", 1, position.getCurrentRowIndex());
+    }
+
+    @Test
+    public void testStartAtOneOneAndMoveRightOnceDownOnceLeftTwiceUpTwice(){
+        CurrentArrayPosition position = new CurrentArrayPosition(1);
+        position.move();
+        position.turnRight();
+        position.move();
+        position.turnRight();
+        position.move();
+        position.move();
+        position.turnRight();
+        position.move();
+        position.move();
+        assertEquals("column", 0, position.getCurrentColumnIndex());
+        assertEquals("row", 0, position.getCurrentRowIndex());
+    }
+
+    @Test
+    public void testStartAtOneOneAndMoveRightOnceDownOnceLeftTwiceUpTwiceRightThreeTimes(){
+        CurrentArrayPosition position = new CurrentArrayPosition(1);
+        position.move();
+        position.turnRight();
+        position.move();
+        position.turnRight();
+        position.move();
+        position.move();
+        position.turnRight();
+        position.move();
+        position.move();
+        position.turnRight();
+        position.move();
+        position.move();
+        position.move();
+        assertEquals("column", 3, position.getCurrentColumnIndex());
+        assertEquals("row", 0, position.getCurrentRowIndex());
+    }
 }

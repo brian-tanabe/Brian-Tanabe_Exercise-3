@@ -8,7 +8,19 @@ public class SpiralArray {
     protected int arrayWidth;
 
     protected static int getSpiralArrayWidth(int numberToPrintUpTo){
-        return (int) Math.ceil(Math.sqrt(numberToPrintUpTo + 1));
+        return 1 + (int)Math.floor(Math.sqrt(numberToPrintUpTo));
+
+//        return (int)(Math.floor(Math.sqrt(numberToPrintUpTo)) + 1);
+//        return (int) Math.ceil(Math.sqrt(numberToPrintUpTo + 1));
     }
 
+    protected static int getSpiralArrayHeight(int numberToPrintUpTo){
+        // TODO REFACTOR THIS:
+        if(numberToPrintUpTo < 2){
+            return 1;
+        } else {
+            return 1 + (int)Math.floor(Math.sqrt(numberToPrintUpTo));
+        }
+//        return (int) Math.ceil(Math.sqrt(numberToPrintUpTo + 1)) - 1;
+    }
 }

@@ -19,7 +19,7 @@ public class CurrentArrayPosition {
         currentRowIndex += currentDirection.getRowIndexAdjustmentForMovementDirection();
     }
 
-    public void turn(){
+    public void turnRight(){
         currentDirection = currentDirection.turn();
     }
 

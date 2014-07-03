@@ -17,4 +17,14 @@ public class CurrentArrayPositionTest {
         assertEquals("column", 2, position.getCurrentColumnIndex());
         assertEquals("row", 1, position.getCurrentRowIndex());
     }
+
+    @Test
+    public void testStartAtOneOneAndMoveRightOnceDownOnce(){
+        CurrentArrayPosition position = new CurrentArrayPosition(1);
+        position.move();
+        position.turnRight();
+        position.move();
+        assertEquals("column", 2, position.getCurrentColumnIndex());
+        assertEquals("row", 2, position.getCurrentRowIndex());
+    }
 }

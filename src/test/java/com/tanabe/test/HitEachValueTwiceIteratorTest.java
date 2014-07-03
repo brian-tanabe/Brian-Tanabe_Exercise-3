@@ -15,4 +15,19 @@ public class HitEachValueTwiceIteratorTest {
         HitEachValueTwiceIterator iterator = new HitEachValueTwiceIterator(1);
         assertEquals((int)1, (int)iterator.next());
     }
+
+    @Test
+    public void testHitOneTwice(){
+        HitEachValueTwiceIterator iterator = new HitEachValueTwiceIterator(1);
+        assertEquals("first hit", (int)1, (int)iterator.next());
+        assertEquals("second hit", (int)1, (int)iterator.next());
+    }
+
+    @Test
+    public void testHitOneTwiceTwoOnce(){
+        HitEachValueTwiceIterator iterator = new HitEachValueTwiceIterator(1);
+        assertEquals("first hit one", (int)1, (int)iterator.next());
+        assertEquals("second hit one", (int)1, (int)iterator.next());
+        assertEquals("first hit two", (int)2, (int)iterator.next());
+    }
 }

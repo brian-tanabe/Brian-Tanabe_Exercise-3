@@ -12,11 +12,13 @@ public class SpiralArrayPopulator {
         spiralArray = new SpiralArray(numberToPrintUpTo);
     }
 
+    // For JUnit:
     protected SpiralArrayPopulator(){}
 
     public SpiralArray createAndPopulateSpiralArray(){
+        spiralArray = new SpiralArray(numberToPrintUpTo);
 
-        return null;
+        return spiralArray;
     }
 
     protected static int determineStartingIndices(SpiralArray array){

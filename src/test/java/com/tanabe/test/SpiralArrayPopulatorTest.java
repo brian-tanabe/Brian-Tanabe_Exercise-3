@@ -17,6 +17,7 @@ public class SpiralArrayPopulatorTest extends SpiralArrayPopulator {
         assertEquals(0, testSpiralArray.getSpiralArray()[0][0]);
     }
 
+    //region determineIndicesTests
     @Test
     public void testDetermineStartingIndicesForZero(){
         assertEquals(0, SpiralArrayPopulator.determineStartingIndices(new SpiralArray(0)));
@@ -46,4 +47,5 @@ public class SpiralArrayPopulatorTest extends SpiralArrayPopulator {
     public void testDetermineStartingIndicesForEight(){
         assertEquals(1, SpiralArrayPopulator.determineStartingIndices(new SpiralArray(8)));
     }
+    //endregion
 }

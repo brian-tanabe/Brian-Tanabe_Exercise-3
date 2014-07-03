@@ -18,9 +18,9 @@ public class SpiralArrayPopulator {
     public SpiralArray createAndPopulateSpiralArray(){
         spiralArray = new SpiralArray(numberToPrintUpTo);
 
-        for(int numberToAddToArray = 0; numberToAddToArray <= numberToPrintUpTo;){
-
-        }
+//        for(int numberToAddToArray = 0; numberToAddToArray <= numberToPrintUpTo;){
+//
+//        }
 
         return spiralArray;
     }

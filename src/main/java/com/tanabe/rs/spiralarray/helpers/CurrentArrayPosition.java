@@ -6,9 +6,31 @@ package com.tanabe.rs.spiralarray.helpers;
 public class CurrentArrayPosition {
     protected int currentColumnIndex;
     protected int currentRowIndex;
+    protected SpiralDirection currentDirection;
 
     public CurrentArrayPosition(int startingIndex){
         currentColumnIndex = startingIndex;
         currentRowIndex = startingIndex;
+        currentDirection = SpiralDirection.getStartingDirection();
+    }
+
+    public void move(){
+
+    }
+
+    public void turn(){
+
+    }
+
+    public int getCurrentColumnIndex() {
+        return currentColumnIndex;
+    }
+
+    public int getCurrentRowIndex(){
+        return currentRowIndex;
+    }
+
+    public SpiralDirection getCurrentMovementDirectionDirection(){
+        return currentDirection;
     }
 }

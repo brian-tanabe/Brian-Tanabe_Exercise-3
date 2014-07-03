@@ -24,4 +24,30 @@ public enum SpiralDirection {
     public static SpiralDirection getStartingDirection(){
         return SpiralDirection.RIGHT;
     }
+
+    public int getColumnIndexAdjustmentForMovementDirection(){
+        switch(this){
+            case RIGHT:
+                return 1;
+            case LEFT:
+                return -1;
+            case DOWN:
+            case UP:
+            default:
+                return 0;
+        }
+    }
+
+    public int getRowIndexAdjustmentForMovementDirection(){
+        switch(this){
+            case DOWN:
+                return 1;
+            case UP:
+                return -1;
+            case LEFT:
+            case RIGHT:
+            default:
+                return 0;
+        }
+    }
 }

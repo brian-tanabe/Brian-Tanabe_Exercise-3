@@ -7,8 +7,6 @@ public class CurrentArrayPosition {
     protected int currentColumnIndex;
     protected int currentRowIndex;
 
-
-
     public CurrentArrayPosition(int startingIndex){
         currentColumnIndex = startingIndex;
         currentRowIndex = startingIndex;

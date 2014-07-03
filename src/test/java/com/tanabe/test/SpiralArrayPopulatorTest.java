@@ -13,7 +13,7 @@ public class SpiralArrayPopulatorTest {
 
     @Test
     public void checkSpiralArrayValuesForZero(){
-        SpiralArray testSpiralArray = SpiralArrayPopulator.createAndPopulateSpiralArray(0);
+        SpiralArray testSpiralArray = new SpiralArrayPopulator(0).createAndPopulateSpiralArray();
         assertEquals(0, testSpiralArray.getSpiralArray()[0][0]);
     }
 }

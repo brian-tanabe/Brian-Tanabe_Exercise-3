@@ -1,4 +1,4 @@
-package com.tanabe.rs.helpers;
+package com.tanabe.rs.spiralarray;
 
 import java.util.Arrays;
 
@@ -18,6 +18,8 @@ public class SpiralArray {
         instantiateSpiralArray();
     }
 
+
+    //region PRIVATE HELPER FUNCTIONS:
     private void instantiateSpiralArray() {
         spiralArray = new int[arrayWidth][arrayHeight];
         setSpiralArraySlotsToAllEmpty();
@@ -28,6 +30,7 @@ public class SpiralArray {
                 Arrays.fill(spiralArray[row], EMPTY_SLOT);
             }
         }
+    //endregion
 
     //region PROTECTED HELPER FUNCTIONS:
     protected SpiralArray(){}

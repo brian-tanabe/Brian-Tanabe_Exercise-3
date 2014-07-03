@@ -7,11 +7,16 @@ public class SpiralArray {
     protected int arrayHeight;
     protected int arrayWidth;
 
+    public SpiralArray(int numberToPrintTo){
+        arrayWidth = getSpiralArrayWidth(numberToPrintTo);
+        arrayHeight = getSpiralArrayHeight(numberToPrintTo);
+    }
+
+    // For JUnit:
+    protected SpiralArray(){}
+
     protected static int getSpiralArrayWidth(int numberToPrintUpTo){
         return 1 + (int)Math.floor(Math.sqrt(numberToPrintUpTo));
-
-//        return (int)(Math.floor(Math.sqrt(numberToPrintUpTo)) + 1);
-//        return (int) Math.ceil(Math.sqrt(numberToPrintUpTo + 1));
     }
 
     protected static int getSpiralArrayHeight(int numberToPrintUpTo){
@@ -21,6 +26,14 @@ public class SpiralArray {
         } else {
             return 1 + (int)Math.floor(Math.sqrt(numberToPrintUpTo));
         }
-//        return (int) Math.ceil(Math.sqrt(numberToPrintUpTo + 1)) - 1;
+    }
+
+    // GETTERS:
+    public int getArrayHeight() {
+        return arrayHeight;
+    }
+
+    public int getArrayWidth() {
+        return arrayWidth;
     }
 }

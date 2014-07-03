@@ -8,87 +8,103 @@ import static junit.framework.Assert.assertEquals;
 /**
  * Created by Brian on 7/3/2014.
  */
-public class SpiralArrayTest extends SpiralArray {
+public class SpiralArrayTest {
 
     // getArrayWidth tests:
     @Test
     public void testGetArrayWidthForZero(){
-        assertEquals(1, getSpiralArrayWidth(0));
+        SpiralArray testArray = new SpiralArray(0);
+        assertEquals(1, testArray.getArrayWidth());
     }
 
     @Test
     public void testGetArrayWidthForOne(){
-        assertEquals(2, getSpiralArrayWidth(1));
+        SpiralArray testArray = new SpiralArray(1);
+        assertEquals(2, testArray.getArrayWidth());
     }
 
     @Test
     public void testGetArrayWidthForTwo(){
-        assertEquals(2, getSpiralArrayWidth(2));
+        SpiralArray testArray = new SpiralArray(2);
+        assertEquals(2, testArray.getArrayWidth());
     }
 
     @Test
     public void testGetArrayWidthForThree(){
-        assertEquals(2, getSpiralArrayWidth(3));
+        SpiralArray testArray = new SpiralArray(3);
+        assertEquals(2, testArray.getArrayWidth());
     }
 
     @Test
     public void testGetArrayWidthForFour(){
-        assertEquals(3, getSpiralArrayWidth(4));
+        SpiralArray testArray = new SpiralArray(4);
+        assertEquals(3, testArray.getArrayWidth());
     }
 
     @Test
     public void testGetArrayWidthForNine(){
-        assertEquals(4, getSpiralArrayWidth(9));
+        SpiralArray testArray = new SpiralArray(9);
+        assertEquals(4, testArray.getArrayWidth());
     }
 
     @Test
     public void testGetArrayWidthForTwentyFour(){
-        assertEquals(5, getSpiralArrayWidth(24));
+        SpiralArray testArray = new SpiralArray(24);
+        assertEquals(5, testArray.getArrayWidth());
     }
 
     @Test
     public void testGetArrayWidthForTwentyFive(){
-        assertEquals(6, getSpiralArrayWidth(25));
+        SpiralArray testArray = new SpiralArray(25);
+        assertEquals(6, testArray.getArrayWidth());
     }
 
     // getArrayHeightTests:
     @Test
     public void testGetArrayHeightForZero(){
-        assertEquals(1, getSpiralArrayHeight(0));
+        SpiralArray testArray = new SpiralArray(0);
+        assertEquals(1, testArray.getArrayHeight());
     }
 
     @Test
     public void testGetArrayHeightForOne(){
-        assertEquals(1, getSpiralArrayHeight(1));
+        SpiralArray testArray = new SpiralArray(1);
+        assertEquals(1, testArray.getArrayHeight());
     }
 
     @Test
     public void testGetArrayHeightForTwo(){
-        assertEquals(2, getSpiralArrayHeight(2));
+        SpiralArray testArray = new SpiralArray(2);
+        assertEquals(2, testArray.getArrayHeight());
     }
 
     @Test
     public void testGetArrayHeightForThree(){
-        assertEquals(2, getSpiralArrayHeight(3));
+        SpiralArray testArray = new SpiralArray(3);
+        assertEquals(2, testArray.getArrayHeight());
     }
 
     @Test
     public void testGetArrayHeightForFour(){
-        assertEquals(3, getSpiralArrayHeight(4));
+        SpiralArray testArray = new SpiralArray(4);
+        assertEquals(3, testArray.getArrayHeight());
     }
 
     @Test
     public void testGetArrayHeightForNine(){
-        assertEquals(4, getSpiralArrayHeight(9));
+        SpiralArray testArray = new SpiralArray(9);
+        assertEquals(4, testArray.getArrayHeight());
     }
 
     @Test
     public void testGetArrayHeightForTwentyFour(){
-        assertEquals(5, getSpiralArrayHeight(24));
+        SpiralArray testArray = new SpiralArray(24);
+        assertEquals(5, testArray.getArrayHeight());
     }
 
     @Test
     public void testGetArrayHeightForTwentyFive(){
-        assertEquals(6, getSpiralArrayHeight(25));
+        SpiralArray testArray = new SpiralArray(25);
+        assertEquals(6, testArray.getArrayHeight());
     }
 }

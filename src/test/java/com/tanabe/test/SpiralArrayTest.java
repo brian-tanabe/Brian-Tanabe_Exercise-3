@@ -15,4 +15,9 @@ public class SpiralArrayTest extends SpiralArray {
     public void testGetArrayWidthForTwentyFour(){
         assertEquals(5, getSpiralArrayWidth(25));
     }
+
+    @Test
+    public void testGetArrayWidthForZero(){
+        assertEquals(1, getSpiralArrayWidth(0));
+    }
 }

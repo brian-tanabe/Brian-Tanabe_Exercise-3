@@ -7,7 +7,6 @@ public class SpiralArray {
 
 
     protected static int getSpiralArrayWidth(int numberToPrintUpTo){
-
-        return -1;
+        return (int)Math.floor(Math.sqrt(numberToPrintUpTo + 1));
     }
 }

@@ -3,14 +3,16 @@ package com.tanabe.test;
 import com.tanabe.rs.helpers.SpiralArray;
 import org.junit.Test;
 
+import static com.tanabe.rs.helpers.SpiralArray.EMPTY_SLOT;
 import static junit.framework.Assert.assertEquals;
+import static junit.framework.Assert.assertTrue;
 
 /**
  * Created by Brian on 7/3/2014.
  */
 public class SpiralArrayTest {
 
-    // getArrayWidth tests:
+    //region getArrayWidthTests:
     @Test
     public void testGetArrayWidthForZero(){
         SpiralArray testArray = new SpiralArray(0);
@@ -58,8 +60,9 @@ public class SpiralArrayTest {
         SpiralArray testArray = new SpiralArray(25);
         assertEquals(6, testArray.getArrayWidth());
     }
+    //endregion
 
-    // getArrayHeightTests:
+    //region getArrayHeightTests:
     @Test
     public void testGetArrayHeightForZero(){
         SpiralArray testArray = new SpiralArray(0);
@@ -107,4 +110,55 @@ public class SpiralArrayTest {
         SpiralArray testArray = new SpiralArray(25);
         assertEquals(6, testArray.getArrayHeight());
     }
+    //endregion
+
+    //region createEmptySpiralArrayTests:
+    @Test
+    public void testCreateEmptySpiralArrayForZero(){
+        SpiralArray testArray = new SpiralArray(0);
+        int[][] spiralArray = testArray.getSpiralArray();
+        assertEquals("Array width", 1, spiralArray.length);
+        assertEquals("Array height", 1, spiralArray[0].length);
+        assertTrue("Array cleared", isArrayEmpty(spiralArray));
+    }
+
+    @Test
+    public void testCreateSpiralArrayForZero(){
+        SpiralArray testArray = new SpiralArray(1);
+        int[][] spiralArray = testArray.getSpiralArray();
+        assertEquals("Array width", 2, spiralArray.length);
+        assertEquals("Array height", 1, spiralArray[0].length);
+        assertTrue("Array cleared", isArrayEmpty(spiralArray));
+    }
+
+    @Test
+    public void testCreateSpiralArrayForTwo(){
+        SpiralArray testArray = new SpiralArray(2);
+        int[][] spiralArray = testArray.getSpiralArray();
+        assertEquals("Array width", 2, spiralArray.length);
+        assertEquals("Array height", 2, spiralArray[0].length);
+        assertTrue("Array cleared", isArrayEmpty(spiralArray));
+    }
+
+    @Test
+    public void testCreateSpiralArrayForThree(){
+        SpiralArray testArray = new SpiralArray(4);
+        int[][] spiralArray = testArray.getSpiralArray();
+        assertEquals("Array width", 3, spiralArray.length);
+        assertEquals("Array height", 3, spiralArray[0].length);
+        assertTrue("Array cleared", isArrayEmpty(spiralArray));
+    }
+
+        private boolean isArrayEmpty(int[][] array){
+            boolean isEmpty = true;
+            for(int row = 0; row < array.length; row++){
+                for(int column = 0; column < array[0].length; column++){
+                    isEmpty &= (array[row][column] == EMPTY_SLOT);
+                }
+            }
+
+            return true;
+        }
+    //endregion
 }
+

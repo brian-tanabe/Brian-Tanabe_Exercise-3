@@ -18,21 +18,25 @@ public class SpiralArrayPopulator {
     public SpiralArray createAndPopulateSpiralArray(){
         spiralArray = new SpiralArray(numberToPrintUpTo);
 
+        for(int numberToAddToArray = 0; numberToAddToArray <= numberToPrintUpTo;){
+
+        }
+
         return spiralArray;
     }
 
     protected static int determineStartingIndices(SpiralArray array){
         if(array.getArrayWidth() < 3)
-            return determineStartingIndiciesWhenStartingInTheUpperLeftCorner(array);
+            return determineStartingIndicesWhenStartingInTheUpperLeftCorner(array);
         else
-            return determineStartingIndiciesWhenStartingInTheCenter(array);
+            return determineStartingIndicesWhenStartingInTheCenter(array);
     }
 
-        private static int determineStartingIndiciesWhenStartingInTheUpperLeftCorner(SpiralArray array){
+        private static int determineStartingIndicesWhenStartingInTheUpperLeftCorner(SpiralArray array){
             return (int)(Math.floor(Math.sqrt(array.getArrayHeight())) - 1);
         }
 
-        private static int determineStartingIndiciesWhenStartingInTheCenter(SpiralArray array){
+        private static int determineStartingIndicesWhenStartingInTheCenter(SpiralArray array){
             return (int)Math.floor(Math.sqrt(array.getArrayHeight()));
         }
 }

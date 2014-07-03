@@ -24,6 +24,14 @@ public class SpiralArrayPopulatorTest extends SpiralArrayPopulator {
         assertEquals("one placement", 1, testSpiralArray.getSpiralArray()[1][0]);
     }
 
+    @Test
+    public void checkSpiralArrayValuesForTwo(){
+        SpiralArray testSpiralArray = new SpiralArrayPopulator(2).createAndPopulateSpiralArray();
+        assertEquals("zero placement", 0, testSpiralArray.getSpiralArray()[0][0]);
+        assertEquals("one placement", 1, testSpiralArray.getSpiralArray()[1][0]);
+        assertEquals("two placement", 1, testSpiralArray.getSpiralArray()[1][1]);
+    }
+
     //region determineIndicesTests
     @Test
     public void testDetermineStartingIndicesForZero(){

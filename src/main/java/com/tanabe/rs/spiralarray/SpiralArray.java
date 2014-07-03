@@ -18,6 +18,10 @@ public class SpiralArray {
         instantiateSpiralArray();
     }
 
+    // TODO THROW EXCEPTIONS:
+    public void set(int column, int row, int value){
+        spiralArray[column][row] = value;
+    }
 
     //region PRIVATE HELPER FUNCTIONS:
     private void instantiateSpiralArray() {

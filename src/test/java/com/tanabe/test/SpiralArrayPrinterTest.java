@@ -55,7 +55,7 @@ public class SpiralArrayPrinterTest {
         SpiralArray array = spiralArrayPopulator.createAndPopulateSpiralArray();
         SpiralArrayPrinter.printSpiralArray(array);
 
-        assertEquals("\t0\t1\r\n\t3\t2\r\n".trim(), byteArrayOutputStream.toString().trim());
+        assertEquals("\t\t0\t1\r\n\t\t3\t2\r\n".trim(), byteArrayOutputStream.toString().trim());
     }
 
     @Test
@@ -64,7 +64,7 @@ public class SpiralArrayPrinterTest {
         SpiralArray array = spiralArrayPopulator.createAndPopulateSpiralArray();
         SpiralArrayPrinter.printSpiralArray(array);
 
-        assertEquals("\t6\t7\t8\r\n5\t0\t1\r\n4\t3\t2\r\n".trim(), byteArrayOutputStream.toString().trim());
+        assertEquals("\r6\t7\t8\r\n\t5\t0\t1\r\n\t4\t3\t2\r\n".trim(), byteArrayOutputStream.toString().trim());
     }
 
     @Test
@@ -73,6 +73,6 @@ public class SpiralArrayPrinterTest {
         SpiralArray array = spiralArrayPopulator.createAndPopulateSpiralArray();
         SpiralArrayPrinter.printSpiralArray(array);
 
-        assertEquals("\t6\t7\t8\t9\r\n5\t0\t1\r\n4\t3\t2\r\n".trim(), byteArrayOutputStream.toString().trim());
+        assertEquals("\t\t6\t7\t8\t9\r\n\t\t5\t0\t1\t\r\n\t\t4\t3\t2".trim(), byteArrayOutputStream.toString().trim());
     }
 }

@@ -1,4 +1,4 @@
-package com.tanabe.rs.spiralarray.helpers;
+package com.tanabe.rs.array.helpers;
 
 /**
  * Created by Brian on 7/3/2014.

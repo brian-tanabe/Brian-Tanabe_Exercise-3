@@ -1,9 +1,9 @@
 package com.tanabe.test;
 
-import com.tanabe.rs.spiralarray.SpiralArray;
+import com.tanabe.rs.array.SpiralArray;
 import org.junit.Test;
 
-import static com.tanabe.rs.spiralarray.SpiralArray.EMPTY_SLOT;
+import static com.tanabe.rs.array.SpiralArray.EMPTY_SLOT;
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertTrue;
 

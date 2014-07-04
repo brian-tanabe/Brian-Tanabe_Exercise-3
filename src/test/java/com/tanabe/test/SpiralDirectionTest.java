@@ -1,6 +1,6 @@
 package com.tanabe.test;
 
-import com.tanabe.rs.spiralarray.helpers.SpiralDirection;
+import com.tanabe.rs.array.helpers.SpiralDirection;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

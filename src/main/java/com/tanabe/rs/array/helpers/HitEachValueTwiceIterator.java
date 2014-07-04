@@ -1,4 +1,4 @@
-package com.tanabe.rs.spiralarray.helpers;
+package com.tanabe.rs.array.helpers;
 
 import java.util.Iterator;
 

@@ -1,4 +1,4 @@
-package com.tanabe.rs.spiralarray;
+package com.tanabe.rs.array;
 
 import java.util.Arrays;
 

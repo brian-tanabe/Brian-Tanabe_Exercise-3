@@ -1,6 +1,6 @@
 package com.tanabe.test;
 
-import com.tanabe.rs.spiralarray.helpers.HitEachValueTwiceIterator;
+import com.tanabe.rs.array.helpers.HitEachValueTwiceIterator;
 import org.junit.Test;
 
 import static junit.framework.Assert.assertEquals;

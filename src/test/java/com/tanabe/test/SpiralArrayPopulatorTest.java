@@ -1,7 +1,7 @@
 package com.tanabe.test;
 
-import com.tanabe.rs.spiralarray.SpiralArray;
-import com.tanabe.rs.spiralarray.SpiralArrayPopulator;
+import com.tanabe.rs.array.SpiralArray;
+import com.tanabe.rs.array.SpiralArrayPopulator;
 import org.junit.Test;
 
 import static junit.framework.Assert.assertEquals;

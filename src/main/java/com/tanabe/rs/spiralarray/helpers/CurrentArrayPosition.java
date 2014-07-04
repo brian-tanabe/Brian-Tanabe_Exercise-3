@@ -35,4 +35,9 @@ public class CurrentArrayPosition {
     public SpiralDirection getCurrentMovementDirectionDirection(){
         return currentDirection;
     }
+
+    @Override
+    public String toString() {
+        return String.format("(%d, %d), %s", currentColumnIndex, currentRowIndex, currentDirection);
+    }
 }

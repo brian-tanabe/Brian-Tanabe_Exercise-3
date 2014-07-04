@@ -23,9 +23,11 @@ public class SpiralArrayPopulator {
 
     public SpiralArray createAndPopulateSpiralArray(){
         spiralArray = new SpiralArray(numberToPrintUpTo);
+        spiralArray.set(currentPosition.getCurrentColumnIndex(), currentPosition.getCurrentRowIndex(), 0);
+        currentPosition.move();
 
+        int numberToAddToArray = 1;
         HitEachValueTwiceIterator stepIterator = new HitEachValueTwiceIterator(1);
-        int numberToAddToArray = 0;
         while(numberToAddToArray <= numberToPrintUpTo){
             int stepsToTakeBeforeTurning = stepIterator.next();
             int stepsTakenSinceLastTurn = 0;
@@ -33,7 +35,7 @@ public class SpiralArrayPopulator {
                 spiralArray.set(currentPosition.getCurrentColumnIndex(), currentPosition.getCurrentRowIndex(), numberToAddToArray);
                 numberToAddToArray++;
                 stepsTakenSinceLastTurn++;
-            } while(numberToAddToArray <= numberToPrintUpTo && stepsTakenSinceLastTurn <= stepsToTakeBeforeTurning && currentPosition.move());
+            } while(numberToAddToArray <= numberToPrintUpTo && stepsTakenSinceLastTurn < stepsToTakeBeforeTurning && currentPosition.move());
 
             currentPosition.turnRight();
             currentPosition.move();

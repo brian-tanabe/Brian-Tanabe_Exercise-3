@@ -20,25 +20,25 @@ public class SpiralArrayPopulatorTest extends SpiralArrayPopulator {
     @Test
     public void checkSpiralArrayValuesForOne(){
         SpiralArray testSpiralArray = new SpiralArrayPopulator(1).createAndPopulateSpiralArray();
-        assertEquals("zero placement", 0, testSpiralArray.getSpiralArray()[0][0]);
-        assertEquals("one placement", 1, testSpiralArray.getSpiralArray()[1][0]);
+        assertEquals("zero placement", 0, testSpiralArray.getSpiralArray()[1][1]);
+        assertEquals("one placement", 1, testSpiralArray.getSpiralArray()[2][1]);
     }
 
     @Test
     public void checkSpiralArrayValuesForTwo(){
         SpiralArray testSpiralArray = new SpiralArrayPopulator(2).createAndPopulateSpiralArray();
-        assertEquals("zero placement", 0, testSpiralArray.getSpiralArray()[0][0]);
-        assertEquals("one placement", 1, testSpiralArray.getSpiralArray()[1][0]);
-        assertEquals("two placement", 2, testSpiralArray.getSpiralArray()[1][1]);
+        assertEquals("zero placement", 0, testSpiralArray.getSpiralArray()[1][1]);
+        assertEquals("one placement", 1, testSpiralArray.getSpiralArray()[2][1]);
+        assertEquals("two placement", 2, testSpiralArray.getSpiralArray()[2][2]);
     }
 
     @Test
     public void checkSpiralArrayValuesForThree(){
         SpiralArray testSpiralArray = new SpiralArrayPopulator(3).createAndPopulateSpiralArray();
-        assertEquals("zero placement", 0, testSpiralArray.getSpiralArray()[0][0]);
-        assertEquals("one placement", 1, testSpiralArray.getSpiralArray()[1][0]);
-        assertEquals("two placement", 2, testSpiralArray.getSpiralArray()[1][1]);
-        assertEquals("three placement", 3, testSpiralArray.getSpiralArray()[0][1]);
+        assertEquals("zero placement", 0, testSpiralArray.getSpiralArray()[1][1]);
+        assertEquals("one placement", 1, testSpiralArray.getSpiralArray()[2][1]);
+        assertEquals("two placement", 2, testSpiralArray.getSpiralArray()[2][2]);
+        assertEquals("three placement", 3, testSpiralArray.getSpiralArray()[1][2]);
     }
 
     @Test
@@ -103,17 +103,17 @@ public class SpiralArrayPopulatorTest extends SpiralArrayPopulator {
 
     @Test
     public void testDetermineStartingIndicesForOne(){
-        assertEquals(0, SpiralArrayPopulator.determineStartingIndices(new SpiralArray(1)));
+        assertEquals(1, SpiralArrayPopulator.determineStartingIndices(new SpiralArray(1)));
     }
 
     @Test
     public void testDetermineStartingIndicesForTwo(){
-        assertEquals(0, SpiralArrayPopulator.determineStartingIndices(new SpiralArray(2)));
+        assertEquals(1, SpiralArrayPopulator.determineStartingIndices(new SpiralArray(2)));
     }
 
     @Test
     public void testDetermineStartingIndicesForThree(){
-        assertEquals(0, SpiralArrayPopulator.determineStartingIndices(new SpiralArray(3)));
+        assertEquals(1, SpiralArrayPopulator.determineStartingIndices(new SpiralArray(3)));
     }
 
     @Test
@@ -122,8 +122,38 @@ public class SpiralArrayPopulatorTest extends SpiralArrayPopulator {
     }
 
     @Test
-    public void testDetermineStartingIndicesForEight(){
+         public void testDetermineStartingIndicesForEight(){
         assertEquals(1, SpiralArrayPopulator.determineStartingIndices(new SpiralArray(8)));
+    }
+
+    @Test
+    public void testDetermineStartingIndicesForNine(){
+        assertEquals(2, SpiralArrayPopulator.determineStartingIndices(new SpiralArray(9)));
+    }
+
+    @Test
+         public void testDetermineStartingIndicesForTwentyFour(){
+        assertEquals(2, SpiralArrayPopulator.determineStartingIndices(new SpiralArray(24)));
+    }
+
+    @Test
+    public void testDetermineStartingIndicesForTwentyTwentyFive(){
+        assertEquals(3, SpiralArrayPopulator.determineStartingIndices(new SpiralArray(25)));
+    }
+
+    @Test
+    public void testDetermineStartingIndicesForSixtyThree(){
+        assertEquals(4, SpiralArrayPopulator.determineStartingIndices(new SpiralArray(63)));
+    }
+
+    @Test
+    public void testDetermineStartingIndicesForEighty(){
+        assertEquals(4, SpiralArrayPopulator.determineStartingIndices(new SpiralArray(80)));
+    }
+
+    @Test
+    public void testDetermineStartingIndicesForEightyOne(){
+        assertEquals(5, SpiralArrayPopulator.determineStartingIndices(new SpiralArray(81)));
     }
     //endregion
 }

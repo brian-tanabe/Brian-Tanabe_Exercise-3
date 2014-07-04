@@ -48,17 +48,7 @@ public class SpiralArrayPopulator {
 
     // TODO THIS LOGIC BELONGS IN CurrentArrayPosition:
     protected static int determineStartingIndices(SpiralArray array){
-        if(array.getArrayWidth() < 3)
-            return determineStartingIndicesWhenStartingInTheUpperLeftCorner(array);
-        else
-            return determineStartingIndicesWhenStartingInTheCenter(array);
+        return (int)array.getArrayWidth() / 2;
     }
 
-        private static int determineStartingIndicesWhenStartingInTheUpperLeftCorner(SpiralArray array){
-            return (int)(Math.floor(Math.sqrt(array.getArrayHeight())) - 1);
-        }
-
-        private static int determineStartingIndicesWhenStartingInTheCenter(SpiralArray array){
-            return (int)Math.floor(Math.sqrt(array.getArrayHeight()));
-        }
 }

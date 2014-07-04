@@ -40,16 +40,11 @@ public class SpiralArray {
     protected SpiralArray(){}
 
     protected static int getSpiralArrayWidth(int numberToPrintUpTo){
-        return 1 + (int)Math.floor(Math.sqrt(numberToPrintUpTo));
+        return (int)(Math.ceil(Math.sqrt(numberToPrintUpTo + 1)) + (1 - Math.ceil(Math.sqrt(numberToPrintUpTo + 1)) % 2));
     }
 
     protected static int getSpiralArrayHeight(int numberToPrintUpTo){
-        // TODO REFACTOR THIS:
-        if(numberToPrintUpTo < 2){
-            return 1;
-        } else {
-            return 1 + (int)Math.floor(Math.sqrt(numberToPrintUpTo));
-        }
+        return (int)(Math.ceil(Math.sqrt(numberToPrintUpTo + 1)) + (1 - Math.ceil(Math.sqrt(numberToPrintUpTo + 1)) % 2));
     }
     //endregion
 

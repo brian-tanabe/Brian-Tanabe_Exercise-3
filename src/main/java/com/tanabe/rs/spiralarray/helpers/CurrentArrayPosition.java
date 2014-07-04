@@ -14,9 +14,10 @@ public class CurrentArrayPosition {
         currentDirection = SpiralDirection.getStartingDirection();
     }
 
-    public void move(){
+    public boolean move(){
         currentColumnIndex += currentDirection.getColumnIndexAdjustmentForMovementDirection();
         currentRowIndex += currentDirection.getRowIndexAdjustmentForMovementDirection();
+        return true;
     }
 
     public void turnRight(){

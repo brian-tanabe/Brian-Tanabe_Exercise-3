@@ -1,4 +1,4 @@
-package com.tanabe.test;
+package com.tanabe.test.integration;
 
 import com.tanabe.rs.array.SpiralArray;
 import com.tanabe.rs.helpers.SpiralArrayPopulator;

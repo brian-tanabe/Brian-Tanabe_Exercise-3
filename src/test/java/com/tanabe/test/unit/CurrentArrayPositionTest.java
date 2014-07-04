@@ -1,4 +1,4 @@
-package com.tanabe.test;
+package com.tanabe.test.unit;
 
 import com.tanabe.rs.array.movement.CurrentArrayPosition;
 import org.junit.Test;

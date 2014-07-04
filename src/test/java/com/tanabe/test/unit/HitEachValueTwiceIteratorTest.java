@@ -1,4 +1,4 @@
-package com.tanabe.test;
+package com.tanabe.test.unit;
 
 import com.tanabe.rs.array.movement.HitEachValueTwiceIterator;
 import org.junit.Test;

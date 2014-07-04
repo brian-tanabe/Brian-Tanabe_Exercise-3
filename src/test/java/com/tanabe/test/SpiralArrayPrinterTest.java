@@ -24,6 +24,7 @@ public class SpiralArrayPrinterTest {
     @BeforeClass
     public static void setUpConsolePrintingToString(){
         consolePrintStream = new PrintStream(byteArrayOutputStream);
+        byteArrayOutputStream.reset();
         oldPrintStream = System.out;
 
         System.setOut(consolePrintStream);
@@ -39,13 +40,39 @@ public class SpiralArrayPrinterTest {
         byteArrayOutputStream.reset();
     }
 
-
     @Test
     public void testPrintingSpiralArrayOfZero(){
         SpiralArrayPopulator spiralArrayPopulator = new SpiralArrayPopulator(0);
         SpiralArray array = spiralArrayPopulator.createAndPopulateSpiralArray();
         SpiralArrayPrinter.printSpiralArray(array);
 
-        assertEquals("0\t1\r\n3\t2", byteArrayOutputStream.toString().trim());
+        assertEquals("\t0\r\n".trim(), byteArrayOutputStream.toString().trim());
+    }
+
+    @Test
+    public void testPrintingSpiralArrayOfFour(){
+        SpiralArrayPopulator spiralArrayPopulator = new SpiralArrayPopulator(3);
+        SpiralArray array = spiralArrayPopulator.createAndPopulateSpiralArray();
+        SpiralArrayPrinter.printSpiralArray(array);
+
+        assertEquals("\t0\t1\r\n\t3\t2\r\n".trim(), byteArrayOutputStream.toString().trim());
+    }
+
+    @Test
+    public void testPrintingSpiralArrayOfEight(){
+        SpiralArrayPopulator spiralArrayPopulator = new SpiralArrayPopulator(8);
+        SpiralArray array = spiralArrayPopulator.createAndPopulateSpiralArray();
+        SpiralArrayPrinter.printSpiralArray(array);
+
+        assertEquals("\t6\t7\t8\r\n5\t0\t1\r\n4\t3\t2\r\n".trim(), byteArrayOutputStream.toString().trim());
+    }
+
+    @Test
+    public void testPrintingSpiralArrayOfNine(){
+        SpiralArrayPopulator spiralArrayPopulator = new SpiralArrayPopulator(9);
+        SpiralArray array = spiralArrayPopulator.createAndPopulateSpiralArray();
+        SpiralArrayPrinter.printSpiralArray(array);
+
+        assertEquals("\t6\t7\t8\t9\r\n5\t0\t1\r\n4\t3\t2\r\n".trim(), byteArrayOutputStream.toString().trim());
     }
 }

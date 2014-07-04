@@ -65,5 +65,9 @@ public class SpiralArray {
     public int[][] getSpiralArray(){
         return spiralArray;
     }
+
+    public int getValueFromSpiralArray(int column, int row){
+        return spiralArray[column][row];
+    }
     //endregion
 }

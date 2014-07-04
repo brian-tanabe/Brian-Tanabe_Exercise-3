@@ -1,8 +1,27 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        mavenLocal()
+        maven {
+            name 'Shadow'
+            url 'http://dl.bintray.com/content/johnrengelman/gradle-plugins'
+        }
+
+        dependencies {
+            classpath 'org.gradle.plugins:shadow:0.7.4'
+        }
+    }
+}
+
 apply plugin: 'java'
 apply plugin: 'idea'
+apply plugin: 'shadow'
 
-sourceCompatibility = 1.5
-version = '1.0'
+jar {
+    manifest.attributes("Main-Class": "com.tanabe.rs.application.Application")
+    baseName = 'brian-tanabe-exercise-three'
+    version =  '0.1.0'
+}
 
 repositories {
     mavenCentral()

@@ -1,4 +1,4 @@
-package com.tanabe.rs.array.helpers;
+package com.tanabe.rs.array.movement;
 
 /**
  * Created by Brian on 7/3/2014.

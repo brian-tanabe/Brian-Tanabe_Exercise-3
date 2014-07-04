@@ -1,4 +1,4 @@
-package com.tanabe.rs.array.helpers;
+package com.tanabe.rs.array.movement;
 
 import java.util.Iterator;
 

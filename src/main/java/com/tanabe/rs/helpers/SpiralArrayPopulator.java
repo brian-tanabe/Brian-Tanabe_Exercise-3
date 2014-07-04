@@ -1,7 +1,8 @@
-package com.tanabe.rs.array;
+package com.tanabe.rs.helpers;
 
-import com.tanabe.rs.array.helpers.CurrentArrayPosition;
-import com.tanabe.rs.array.helpers.HitEachValueTwiceIterator;
+import com.tanabe.rs.array.SpiralArray;
+import com.tanabe.rs.array.movement.CurrentArrayPosition;
+import com.tanabe.rs.array.movement.HitEachValueTwiceIterator;
 
 /**
  * Created by Brian on 7/3/2014.

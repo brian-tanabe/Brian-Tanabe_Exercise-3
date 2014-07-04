@@ -1,6 +1,6 @@
 package com.tanabe.test;
 
-import com.tanabe.rs.array.helpers.CurrentArrayPosition;
+import com.tanabe.rs.array.movement.CurrentArrayPosition;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

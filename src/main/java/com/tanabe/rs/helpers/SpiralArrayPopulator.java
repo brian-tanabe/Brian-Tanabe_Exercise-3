@@ -46,7 +46,6 @@ public class SpiralArrayPopulator {
         return spiralArray;
     }
 
-    // TODO THIS LOGIC BELONGS IN CurrentArrayPosition:
     protected static int determineStartingIndices(SpiralArray array){
         return (int)array.getArrayWidth() / 2;
     }
